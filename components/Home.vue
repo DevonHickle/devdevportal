@@ -8,6 +8,9 @@ Hosted applications - Link to mac app store - can be hidden until apps are devel
 
 <script>
 export default {
-  name: 'NuxtTutorial'
+  name: 'Home'
 }
 </script>
+<style>
+
+</style>
