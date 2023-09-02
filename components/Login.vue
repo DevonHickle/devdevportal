@@ -1,19 +1,23 @@
 <template>
     <!-- This will host the login page, will use existing login code - need to convert from React -->
-    <div className="login">
+    <div class="login">
         <form>
-            <h3 class="mb-3 text-white">Welcome, Please Sign In</h3>
-            <div class="mb-3 text-light">
+            <h2 class="mb-3 text-dark">Welcome</h2>
+            <h4 class="mb-3 text-dark">Please Sign In</h4>
+            <div class="mb-3 text-dark">
                 <label>Email Address</label>
                 <input type="email" class="form-control form-control-lg" />
             </div>
-            <div class="mb-3 text-light">
+            <div class="mb-3 text-dark">
                 <label>Password</label>
                 <input type="password" class="form-control form-control-lg">
             </div>
             <button type="submit" class="btn btn-dark btn-lg btn-block">Sign In</button>
-            <p class="forgot-password text-right mt-2 mb-4">
+            <p class="forgot-password text-right">
                 <NuxtLink to="/forgot-password">Forgot Password?</NuxtLink>
+            </p>
+            <p class="forgot-password text-right">
+              <NuxtLink to="/signup">Create an account</NuxtLink>
             </p>
         </form>
     </div>
@@ -31,7 +35,7 @@ export default {
   box-sizing: border-box;
 }
 body {
-  background: #121212 !important;
+  background: #ffffff !important;
   min-height: 100vh;
   display: flex;
   font-weight: 400;
@@ -39,10 +43,16 @@ body {
 body,
 html,
 .App,
-.vue-tempalte,
+.login,
 .vertical-center {
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  height: 50%;
+  min-width: 500px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .navbar-light {
   background-color: #ffffff;
@@ -78,9 +88,7 @@ label {
 }
 .forgot-password,
 .forgot-password a {
-  text-align: right;
   font-size: 13px;
-  padding-top: 10px;
   color: #7a7a7a;
   margin: 0;
 }
