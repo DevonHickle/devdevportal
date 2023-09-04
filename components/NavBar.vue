@@ -1,7 +1,18 @@
 <template>
-    <!-- This will be the nav bar on the top of the page, will stay static and include a settings drop down
-    Will also include a dynamic view of the users name once/if authenticated - otherwise, can stay blank or display "Hello Guest, please sign in"
-    -->
+    <nav clas="navbar navbar-expand-lg navbar-dark bg-dark">
+        <!-- Replace DevDevPortal with a logo eventually -->
+        <a class="navbar-brand" href="#">DevDevPortal</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse">
+            <span class="navbar-toggler-icon" />
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 </template>
 <script>
 export default {

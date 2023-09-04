@@ -1,11 +1,16 @@
 <template>
-  <Login />
+  <LandingPage />
 </template>
-
+  
 <script>
-import Login from '/components/Login.vue';
+import LandingPage from './LandingPage.vue';
+import Login from './Login.vue';
 
 export default {
-  name: 'IndexPage'
+  name: 'IndexPage',
+  components: { Login, LandingPage }
 }
 </script>
+<style>
+  
+</style>
