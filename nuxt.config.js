@@ -15,7 +15,9 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: "stylesheet", type: "text/css", href: "~/node_modules/bootstrap/dist/css/bootstrap.min.css"},
+      { rel: "logo" , type: "image/png", href: "~/assets/logo.png"}
     ]
   },
 
@@ -30,7 +32,9 @@ export default {
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  components: [
+    { path: '~/components/', pathPrefix: false }
+  ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
