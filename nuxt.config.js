@@ -16,19 +16,17 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: "stylesheet", type: "text/css", href: "~/node_modules/bootstrap/dist/css/bootstrap.min.css"},
       { rel: "logo" , type: "image/png", href: "~/assets/logo.png"}
     ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    "~/node_modules/bootstrap/dist/css/bootstrap.min.css"
+    '~/assets/css/main.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    { src: "~/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js", mode: "client" }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -43,11 +41,16 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/bootstrap
-    'bootstrap-vue/nuxt',
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    postcss: {
+      plugins: {
+        tailwindcss: {},
+        autoprefixer: {},
+      }
+    }
   },
   options: {
     esModule: false,
