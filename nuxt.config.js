@@ -41,6 +41,8 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/bootstrap
+    '@nuxtjs/axios',
+    '@nuxtjs/auth',
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -55,4 +57,18 @@ export default {
   options: {
     esModule: false,
   },
+  axios: {
+    baseURL: 'http://localhost:3333/api'
+  },
+  auth: {
+    strategies: {
+      local: {
+        endpoints: {
+          login: { url: '/login', method: 'post', propertyName: 'data.token' },
+          user: { url: '/user', method: 'get', propertyName: 'data' },
+          logout: false
+        }
+      }
+    }
+  }
 }
