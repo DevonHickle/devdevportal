@@ -1,7 +1,12 @@
 <template>
-    <div>
+  <div>
+    <div class="navigation">
       <NavBar />
     </div>
+    <div class="footer">
+      <Footer />
+    </div>
+  </div>
 </template>
     
 <script>
