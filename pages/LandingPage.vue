@@ -3,6 +3,9 @@
     <div class="navigation">
       <NavBar />
     </div>
+    <div class="pageContent">
+      <p>Hello World</p>
+    </div>
     <div class="footer">
       <Footer />
     </div>
