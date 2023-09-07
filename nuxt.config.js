@@ -41,6 +41,7 @@ export default {
     // https://go.nuxtjs.dev/bootstrap
     "@nuxtjs/axios",
     "@nuxtjs/auth",
+    "@nuxtjs/auth-next",
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
