@@ -1,10 +1,9 @@
 <template>
-    <!-- Blog style page for web dev/automation tutorials -->
+  <!-- Blog style page for web dev/automation tutorials -->
 </template>
 <script>
 export default {
-    name: 'Blog'
-}
+  name: "Blog",
+};
 </script>
-<style>
-</style>
+<style></style>

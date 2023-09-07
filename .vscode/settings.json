@@ -1,4 +1,6 @@
 {
-    "nuxt.isNuxtApp": true,
-    "css.lint.unknownAtRules": "ignore"
+  "nuxt.isNuxtApp": true,
+  "css.lint.unknownAtRules": "ignore",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true
 }

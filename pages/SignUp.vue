@@ -3,11 +3,23 @@
     <div class="container">
       <div class="columns">
         <div class="column is-4 is-offset-4">
-          <h2 class="title has-text-centered">Sign In</h2>
+          <h2 class="title has-text-centered">Please create an account</h2>
 
           <Notification :message="error" v-if="error" />
 
-          <form method="post" @submit.prevent="login">
+          <form method="post" @submit.prevent="register">
+            <div class="field">
+              <label class="label">Username</label>
+              <div class="control">
+                <input
+                  type="text"
+                  class="input"
+                  name="username"
+                  v-model="username"
+                  required
+                />
+              </div>
+            </div>
             <div class="field">
               <label class="label">Email</label>
               <div class="control">
@@ -34,13 +46,13 @@
             </div>
             <div class="control">
               <button type="submit" class="button is-dark is-fullwidth">
-                Sign In
+                Register
               </button>
             </div>
           </form>
 
           <div class="has-text-centered" style="margin-top: 20px">
-            Don't have an account? <nuxt-link to="/signup">Sign Up!</nuxt-link>
+            Already have an account? <nuxt-link to="/login">Login</nuxt-link>
           </div>
         </div>
       </div>
@@ -50,13 +62,10 @@
 <script>
 export default {
   middleware: "guest",
-  components: {
-    Notification,
-  },
-
-  name: "Login",
+  name: "SignUp",
   data() {
     return {
+      username: "",
       email: "",
       password: "",
       error: null,
@@ -64,8 +73,14 @@ export default {
   },
 
   methods: {
-    async login() {
+    async register() {
       try {
+        await this.$axios.post("register", {
+          username: this.username,
+          email: this.email,
+          password: this.password,
+        });
+
         await this.$auth.loginWith("local", {
           data: {
             email: this.email,
@@ -73,8 +88,8 @@ export default {
           },
         });
         this.$router.push("/");
-      } catch (err) {
-        this.error = err.response.data.message;
+      } catch (e) {
+        this.error = e.response.data.message;
       }
     },
   },
