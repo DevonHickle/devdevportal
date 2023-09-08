@@ -49,15 +49,12 @@ export default {
   options: {
     esModule: false,
   },
-  axios: {
-    baseURL: "http://localhost:3333/api",
-  },
   auth: {
     strategies: {
       local: {
         endpoints: {
-          login: { url: "/login", method: "post", propertyName: "data.token" },
-          user: { url: "/user", method: "get", propertyName: "data" },
+          login: { url: "/login", method: "post", propertyName: "token" },
+          user: { url: "/user", method: "get", propertyName: "user" },
           logout: false,
         },
       },

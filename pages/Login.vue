@@ -33,7 +33,11 @@
               </div>
             </div>
             <div class="control">
-              <button type="submit" class="button is-dark is-fullwidth">
+              <button
+                type="submit"
+                class="button is-dark is-fullwidth"
+                @click.prevent="login"
+              >
                 Sign In
               </button>
             </div>
