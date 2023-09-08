@@ -16,6 +16,7 @@
 import NavBar from "../components/NavBar.vue";
 
 export default {
+  middeleware: "auth",
   name: "LandingPage",
 };
 </script>

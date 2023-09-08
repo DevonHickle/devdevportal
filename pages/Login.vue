@@ -53,7 +53,7 @@
 </template>
 <script>
 export default {
-  middleware: "guest",
+  middleware: "auth",
   components: {
     Notification,
   },

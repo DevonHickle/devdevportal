@@ -12,6 +12,7 @@ import Login from "./Login.vue";
 import SignUp from "./SignUp.vue";
 
 export default {
+  middelware: "auth",
   name: "IndexPage",
   components: { Login, LandingPage, SignUp },
 };

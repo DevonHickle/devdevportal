@@ -49,6 +49,9 @@ export default {
   options: {
     esModule: false,
   },
+  axios: {
+    baseURL: "http://localhost:3333/api",
+  },
   auth: {
     strategies: {
       local: {

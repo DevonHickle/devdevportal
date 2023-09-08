@@ -61,7 +61,7 @@
 </template>
 <script>
 export default {
-  middleware: "guest",
+  middleware: "auth",
   name: "SignUp",
   data() {
     return {
